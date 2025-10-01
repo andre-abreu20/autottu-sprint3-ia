@@ -32,13 +32,13 @@ namespace AutoTTU.Models
         [Column(TypeName = "decimal(5, 2)")]
         public decimal? Velocidade { get; set; }
 
-        [Column(TypeName = "decimal(5, 2)")]
+        [Column(TypeName = "decimal(10, 2)")]
         public decimal? Quilometragem { get; set; }
 
         [Column(TypeName = "decimal(5, 2)")]
         public decimal? NivelCombustivel { get; set; }
 
-        [Column(TypeName = "decimal(5, 2)")]
+        [Column(TypeName = "decimal(8, 2)")]
         public decimal? RotacaoMotor { get; set; }
 
         [MaxLength(500)]

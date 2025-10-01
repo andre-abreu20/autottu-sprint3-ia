@@ -53,7 +53,7 @@ def gerar_dados_telemetria(device_id):
         "status": status,
         "temperatura": round(random.uniform(20, 45), 2) if status == "online" else None,
         "velocidade": round(random.uniform(0, 80), 2) if status == "online" else 0,
-        "quilometragem": round(random.uniform(1000, 50000), 2) if status == "online" else None,
+        "quilometragem": round(random.uniform(1000, 99999), 2) if status == "online" else None,
         "nivelCombustivel": round(random.uniform(10, 100), 2) if status == "online" else None,
         "rotacaoMotor": round(random.uniform(1000, 8000), 2) if status == "online" else None,
         "observacoes": f"Simulação automática - {datetime.now().strftime('%H:%M:%S')}"

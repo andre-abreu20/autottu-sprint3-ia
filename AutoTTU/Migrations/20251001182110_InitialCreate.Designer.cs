@@ -12,8 +12,8 @@ using Oracle.EntityFrameworkCore.Metadata;
 namespace AutoTTU.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250930204730_UpdateTelemetriaFields")]
-    partial class UpdateTelemetriaFields
+    [Migration("20251001182110_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -161,10 +161,10 @@ namespace AutoTTU.Migrations
                         .HasColumnType("NVARCHAR2(500)");
 
                     b.Property<decimal?>("Quilometragem")
-                        .HasColumnType("decimal(5, 2)");
+                        .HasColumnType("decimal(10, 2)");
 
                     b.Property<decimal?>("RotacaoMotor")
-                        .HasColumnType("decimal(5, 2)");
+                        .HasColumnType("decimal(8, 2)");
 
                     b.Property<string>("Status")
                         .IsRequired()

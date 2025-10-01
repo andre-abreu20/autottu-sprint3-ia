@@ -294,17 +294,5 @@
         <member name="M:AutoTTU.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
-        <member name="T:AutoTTU.Migrations.UpdateTelemetriaFields">
-            <inheritdoc />
-        </member>
-        <member name="M:AutoTTU.Migrations.UpdateTelemetriaFields.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="M:AutoTTU.Migrations.UpdateTelemetriaFields.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="M:AutoTTU.Migrations.UpdateTelemetriaFields.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
-            <inheritdoc />
-        </member>
     </members>
 </doc>

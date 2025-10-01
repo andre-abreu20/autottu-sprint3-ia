@@ -94,7 +94,9 @@ namespace AutoTTU.Migrations
                     Status = table.Column<string>(type: "NVARCHAR2(50)", maxLength: 50, nullable: false),
                     Temperatura = table.Column<decimal>(type: "decimal(5,2)", nullable: true),
                     Velocidade = table.Column<decimal>(type: "decimal(5,2)", nullable: true),
-                    Bateria = table.Column<decimal>(type: "decimal(5,2)", nullable: true),
+                    Quilometragem = table.Column<decimal>(type: "decimal(10,2)", nullable: true),
+                    NivelCombustivel = table.Column<decimal>(type: "decimal(5,2)", nullable: true),
+                    RotacaoMotor = table.Column<decimal>(type: "decimal(8,2)", nullable: true),
                     Observacoes = table.Column<string>(type: "NVARCHAR2(500)", maxLength: 500, nullable: true)
                 },
                 constraints: table =>
