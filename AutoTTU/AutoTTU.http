@@ -1,0 +1,6 @@
+@AutoTTU_HostAddress = http://localhost:5143
+
+GET {{AutoTTU_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

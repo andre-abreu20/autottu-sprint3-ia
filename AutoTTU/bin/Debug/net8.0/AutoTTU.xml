@@ -1,0 +1,310 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AutoTTU</name>
+    </assembly>
+    <members>
+        <member name="M:AutoTTU.Controllers.CheckinsController.GetCheckin">
+            <summary>
+            Lista de todos os CheckIn's realizados
+            </summary>
+        </member>
+        <member name="M:AutoTTU.Controllers.CheckinsController.GetCheckin(System.Int32)">
+            <summary>
+            Busca de CheckIn pelo ID
+            </summary>
+            <param name="id">ID do CheckIn</param>
+        </member>
+        <member name="M:AutoTTU.Controllers.CheckinsController.PutCheckin(System.Int32,AutoTTU.Models.Checkin)">
+            <summary>
+            Alteração de CheckIn já realizado
+            </summary>
+            <remarks>
+            Exemplo de requisição:
+            
+                PUT/api/CheckIn
+                   {
+                        "idCheckin": 1,
+                        "idMoto": 1,
+                        "idUsuario": 1,
+                        "ativoChar": "s",
+                        "violada": true,
+                        "observacao": "Moto danificada",
+                        "timeStamp": "2025-09-18",
+                        "imagensUrl": "string"
+                    }
+                  
+            </remarks>
+            
+            <param name="id">ID do CheckIn</param>
+        </member>
+        <member name="M:AutoTTU.Controllers.CheckinsController.PostCheckin(AutoTTU.Models.Checkin)">
+            <summary>
+            Realização de CheckIn
+            </summary>
+            <remarks>
+            Exemplo de requisição:
+            
+                POST/api/CheckIn
+                   {
+                        "idCheckin": 1,
+                        "idMoto": 1,
+                        "idUsuario": 1,
+                        "ativoChar": "s",
+                        "violada": true,
+                        "observacao": "Moto danificada",
+                        "timeStamp": "2025-09-18",
+                        "imagensUrl": "string"
+                    }
+                  
+            </remarks>
+        </member>
+        <member name="M:AutoTTU.Controllers.CheckinsController.DeleteCheckin(System.Int32)">
+            <summary>
+            Apagar CheckIn pelo ID
+            </summary>
+            <param name="id">ID do CheckIn</param>
+        </member>
+        <member name="M:AutoTTU.Controllers.MotosController.GetMotos">
+            <summary>
+            Lista de todas as motos cadastradas
+            </summary>
+        </member>
+        <member name="M:AutoTTU.Controllers.MotosController.GetMotos(System.Int32)">
+            <summary>
+            Busca de uma moto pelo ID
+            </summary>
+            <param name="id">ID da moto</param>
+        </member>
+        <member name="M:AutoTTU.Controllers.MotosController.PutMotos(System.Int32,AutoTTU.Models.Motos)">
+            <summary>
+            Alteração de uma moto já cadastrada
+            </summary>
+            <remarks>
+            Exemplo de requisição:
+            
+                PUT/api/Motos
+                   {
+                     "idMoto": 1,
+                     "modelo": "H2",
+                     "marca": "Honda",
+                     "ano": 2020,
+                     "placa": "FDP3467",
+                     "ativoChar": "s",
+                     "status": true,
+                     "fotoUrl": "123456plcg"
+                   }
+                  
+            </remarks>
+            
+            <param name="id">ID da moto</param>
+        </member>
+        <member name="M:AutoTTU.Controllers.MotosController.PostMotos(AutoTTU.Models.Motos)">
+            <summary>
+            Cadastro de uma moto
+            </summary>
+            <remarks>
+            Exemplo de requisição:
+            
+                POST/api/Motos
+                   {
+                     "idMoto": 1,
+                     "modelo": "H2",
+                     "marca": "Honda",
+                     "ano": 2020,
+                     "placa": "FDP3467",
+                     "ativoChar": "s",
+                     "status": true,
+                     "fotoUrl": "123456plcg"
+                   }
+                  
+            </remarks>
+        </member>
+        <member name="M:AutoTTU.Controllers.MotosController.DeleteMotos(System.Int32)">
+            <summary>
+            Apagar uma moto pelo ID
+            </summary>
+            <param name="id">ID da moto</param>
+        </member>
+        <member name="M:AutoTTU.Controllers.SlotsController.GetSlot">
+            <summary>
+            Lista de todos os slots (espaços de estacionamento) cadastrados
+            </summary>
+        </member>
+        <member name="M:AutoTTU.Controllers.SlotsController.GetSlot(System.Int32)">
+            <summary>
+            Busca de um slot pelo ID
+            </summary>
+            <param name="id">ID do slot</param>
+        </member>
+        <member name="M:AutoTTU.Controllers.SlotsController.PutSlot(System.Int32,AutoTTU.Models.Slot)">
+            <summary>
+            Alteração de um slot já cadastrado
+            </summary>
+            <remarks>
+            Exemplo de requisição:
+            
+                PUT/api/Slots
+                   {
+                        "idSlot": 1,
+                        "idMoto": 1,
+                        "ativoChar": "s",
+                        "ocupado": true
+                   }
+                  
+            </remarks>
+            
+            <param name="id">ID do usuário</param>
+        </member>
+        <member name="M:AutoTTU.Controllers.SlotsController.PostSlot(AutoTTU.Models.Slot)">
+            <summary>
+            Cadastro de um slot
+            </summary>
+            <remarks>
+            Exemplo de requisição:
+            
+                POST/api/Slots
+                   {
+                        "idSlot": 1,
+                        "idMoto": 1,
+                        "ativoChar": "s",
+                        "ocupado": true
+                   }
+                  
+            </remarks>
+            
+        </member>
+        <member name="M:AutoTTU.Controllers.SlotsController.DeleteSlot(System.Int32)">
+            <summary>
+            Apagar um slot pelo ID
+            </summary>
+            <param name="id">ID do slot</param>
+        </member>
+        <member name="M:AutoTTU.Controllers.TelemetriaController.PostTelemetria(AutoTTU.Models.Telemetria)">
+            <summary>
+            Recebe dados de telemetria de uma moto
+            </summary>
+            <param name="telemetria">Dados de telemetria da moto</param>
+            <returns>Dados salvos</returns>
+        </member>
+        <member name="M:AutoTTU.Controllers.TelemetriaController.GetUltimasTelemetrias(System.Int32)">
+            <summary>
+            Busca as últimas telemetrias para o dashboard
+            </summary>
+            <param name="limit">Número máximo de registros (padrão: 50)</param>
+            <returns>Lista das últimas telemetrias</returns>
+        </member>
+        <member name="M:AutoTTU.Controllers.TelemetriaController.GetTelemetriasPorMoto(System.Int32,System.Int32)">
+            <summary>
+            Busca telemetrias de uma moto específica
+            </summary>
+            <param name="deviceId">ID da moto</param>
+            <param name="limit">Número máximo de registros</param>
+            <returns>Lista de telemetrias da moto</returns>
+        </member>
+        <member name="M:AutoTTU.Controllers.TelemetriaController.GetMotosComLocalizacao">
+            <summary>
+            Busca todas as motos com suas últimas localizações
+            </summary>
+            <returns>Lista de motos com localização atual</returns>
+        </member>
+        <member name="M:AutoTTU.Controllers.TelemetriaController.GetTelemetria(System.Int32)">
+            <summary>
+            Busca uma telemetria específica
+            </summary>
+            <param name="id">ID da telemetria</param>
+            <returns>Dados da telemetria</returns>
+        </member>
+        <member name="M:AutoTTU.Controllers.TestDataController.CreateTestData">
+            <summary>
+            Cria dados de teste no banco
+            </summary>
+        </member>
+        <member name="M:AutoTTU.Controllers.TestDataController.GetMotos">
+            <summary>
+            Lista todas as motos cadastradas
+            </summary>
+        </member>
+        <member name="M:AutoTTU.Controllers.UsuariosController.GetUsuario">
+            <summary>
+            Lista de todos os usuários cadastrados
+            </summary>
+        </member>
+        <member name="M:AutoTTU.Controllers.UsuariosController.GetUsuario(System.Int32)">
+            <summary>
+            Busca de um usuário pelo ID
+            </summary>
+            <param name="id">ID do usuário</param>
+        </member>
+        <member name="M:AutoTTU.Controllers.UsuariosController.PutUsuario(System.Int32,AutoTTU.Models.Usuario)">
+            <summary>
+            Alteração de um usuário já cadastrado
+            </summary>
+            <remarks>
+            Exemplo de requisição:
+            
+                PUT/api/Usuarios
+                   {
+                       "idUsuario": 1,
+                       "nome": "Gabriel Silva",
+                       "email": "gabriel@silva.com",
+                       "senha": "12345",
+                       "telefone": "11987654321"
+                    }
+                  
+            </remarks>
+            
+            <param name="id">ID do usuário</param>
+        </member>
+        <member name="M:AutoTTU.Controllers.UsuariosController.PostUsuario(AutoTTU.Models.Usuario)">
+            <summary>
+            Cadastro um usuário
+            </summary>
+            <remarks>
+            Exemplo de requisição:
+            
+                POST/api/Usuarios
+                   {
+                       "idUsuario": 1,
+                       "nome": "Gabriel Silva",
+                       "email": "gabriel@silva.com",
+                       "senha": "12345",
+                       "telefone": "11987654321"
+                    }
+                  
+            </remarks>
+            
+            <param name="id">ID do usuário</param>
+        </member>
+        <member name="M:AutoTTU.Controllers.UsuariosController.DeleteUsuario(System.Int32)">
+            <summary>
+            Apagar um usuário pelo ID
+            </summary>
+            <param name="id">ID do usuário</param>
+        </member>
+        <member name="T:AutoTTU.Migrations.InitialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:AutoTTU.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AutoTTU.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AutoTTU.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:AutoTTU.Migrations.UpdateTelemetriaFields">
+            <inheritdoc />
+        </member>
+        <member name="M:AutoTTU.Migrations.UpdateTelemetriaFields.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AutoTTU.Migrations.UpdateTelemetriaFields.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AutoTTU.Migrations.UpdateTelemetriaFields.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
