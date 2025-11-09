@@ -1,6 +1,8 @@
-using Oracle.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using AutoTTU.Connection;
+using AutoTTU.Configuration;
+using AutoTTU.Services;
+using Oracle.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,6 +32,9 @@ builder.Services.AddCors(options =>
 
 builder.Services.AddDbContext<AppDbContext>(options =>
    options.UseOracle(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.Configure<MqttOptions>(builder.Configuration.GetSection("Mqtt"));
+builder.Services.AddHostedService<MqttTelemetryBackgroundService>();
 
 var app = builder.Build();
 

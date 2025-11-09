@@ -527,3 +527,4 @@ C:\Users\T-GAMER\Downloads\autottuIA\Autottu-API\AutoTTU\obj\Debug\net8.0\AutoTT
 C:\Users\T-GAMER\Downloads\autottuIA\Autottu-API\AutoTTU\obj\Debug\net8.0\AutoTTU.pdb
 C:\Users\T-GAMER\Downloads\autottuIA\Autottu-API\AutoTTU\obj\Debug\net8.0\AutoTTU.genruntimeconfig.cache
 C:\Users\T-GAMER\Downloads\autottuIA\Autottu-API\AutoTTU\obj\Debug\net8.0\ref\AutoTTU.dll
+C:\Users\T-GAMER\Downloads\autottuIA\Autottu-API\AutoTTU\bin\Debug\net8.0\MQTTnet.dll

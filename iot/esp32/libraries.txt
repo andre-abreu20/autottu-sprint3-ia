@@ -1,0 +1,11 @@
+# Wokwi Library List
+# See https://docs.wokwi.com/guides/libraries
+
+MQTTPubSubClient
+TinyGPSPlus
+OneWire
+DallasTemperature
+thinger.io
+ThingerCore32
+PubSubClient
+HttpClient

@@ -1,0 +1,12 @@
+[wokwi]
+version = 1
+
+
+# Caminhos gerados pelo Arduino CLI:
+# arduino-cli compile --fqbn esp32:esp32:esp32 autottu_esp32.ino --build-path build
+firmware = "build/esp32.ino.bin"
+elf      = "build/esp32.ino.elf"
+
+# Usar o Private IoT Gateway local
+iotGateway = "private"  
+display = "always"

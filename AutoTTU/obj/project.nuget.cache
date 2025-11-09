@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "XItkXTQJm88=",
+  "dgSpecHash": "BeM+Yl/jx7Y=",
   "success": true,
   "projectFilePath": "C:\\Users\\T-GAMER\\Downloads\\autottuIA\\Autottu-API\\AutoTTU\\AutoTTU.csproj",
   "expectedPackageFiles": [
@@ -100,6 +100,7 @@
     "D:\\NugetCache\\microsoft.visualstudio.web.codegeneration.utils\\8.0.7\\microsoft.visualstudio.web.codegeneration.utils.8.0.7.nupkg.sha512",
     "D:\\NugetCache\\microsoft.visualstudio.web.codegenerators.mvc\\8.0.7\\microsoft.visualstudio.web.codegenerators.mvc.8.0.7.nupkg.sha512",
     "D:\\NugetCache\\mono.texttemplating\\3.0.0\\mono.texttemplating.3.0.0.nupkg.sha512",
+    "D:\\NugetCache\\mqttnet\\4.3.2.930\\mqttnet.4.3.2.930.nupkg.sha512",
     "D:\\NugetCache\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "D:\\NugetCache\\nuget.common\\6.11.0\\nuget.common.6.11.0.nupkg.sha512",
     "D:\\NugetCache\\nuget.configuration\\6.11.0\\nuget.configuration.6.11.0.nupkg.sha512",
@@ -144,5 +145,18 @@
     "D:\\NugetCache\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512",
     "D:\\NugetCache\\system.threading.tasks.dataflow\\7.0.0\\system.threading.tasks.dataflow.7.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "message": "AutoTTU depende de MQTTnet (>= 4.3.2) mas MQTTnet 4.3.2 não foi encontrado. MQTTnet 4.3.2.930 foi resolvido.",
+      "projectPath": "C:\\Users\\T-GAMER\\Downloads\\autottuIA\\Autottu-API\\AutoTTU\\AutoTTU.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\T-GAMER\\Downloads\\autottuIA\\Autottu-API\\AutoTTU\\AutoTTU.csproj",
+      "libraryId": "MQTTnet",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

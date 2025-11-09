@@ -1695,6 +1695,19 @@
           "buildTransitive/Mono.TextTemplating.targets": {}
         }
       },
+      "MQTTnet/4.3.2.930": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/MQTTnet.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/MQTTnet.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Newtonsoft.Json/13.0.3": {
         "type": "package",
         "compile": {
@@ -5662,6 +5675,41 @@
         "readme.md"
       ]
     },
+    "MQTTnet/4.3.2.930": {
+      "sha512": "PyNF0qgG+VkY30T6p8ljnw6SBmS23slmvwK0k8JqL4z1oSYr3VI0j4Mslx6hzp7QFWNeoZHV1U9mq6/sWUaMTQ==",
+      "type": "package",
+      "path": "mqttnet/4.3.2.930",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/MQTTnet.dll",
+        "lib/net452/MQTTnet.xml",
+        "lib/net461/MQTTnet.dll",
+        "lib/net461/MQTTnet.xml",
+        "lib/net48/MQTTnet.dll",
+        "lib/net48/MQTTnet.xml",
+        "lib/net5.0/MQTTnet.dll",
+        "lib/net5.0/MQTTnet.xml",
+        "lib/net6.0/MQTTnet.dll",
+        "lib/net6.0/MQTTnet.xml",
+        "lib/net7.0/MQTTnet.dll",
+        "lib/net7.0/MQTTnet.xml",
+        "lib/netcoreapp3.1/MQTTnet.dll",
+        "lib/netcoreapp3.1/MQTTnet.xml",
+        "lib/netstandard1.3/MQTTnet.dll",
+        "lib/netstandard1.3/MQTTnet.xml",
+        "lib/netstandard2.0/MQTTnet.dll",
+        "lib/netstandard2.0/MQTTnet.xml",
+        "lib/netstandard2.1/MQTTnet.dll",
+        "lib/netstandard2.1/MQTTnet.xml",
+        "lib/uap10.0.10240/MQTTnet.dll",
+        "lib/uap10.0.10240/MQTTnet.pri",
+        "lib/uap10.0.10240/MQTTnet.xml",
+        "mqttnet.4.3.2.930.nupkg.sha512",
+        "mqttnet.nuspec",
+        "nuget.png"
+      ]
+    },
     "Newtonsoft.Json/13.0.3": {
       "sha512": "HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
       "type": "package",
@@ -6821,6 +6869,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "MQTTnet >= 4.3.2",
       "Microsoft.EntityFrameworkCore >= 9.0.4",
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.4",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 8.0.7",
@@ -6879,6 +6928,10 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "MQTTnet": {
+            "target": "Package",
+            "version": "[4.3.2, )"
+          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[9.0.4, )"
@@ -6924,5 +6977,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "AutoTTU depende de MQTTnet (>= 4.3.2) mas MQTTnet 4.3.2 não foi encontrado. MQTTnet 4.3.2.930 foi resolvido.",
+      "libraryId": "MQTTnet",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

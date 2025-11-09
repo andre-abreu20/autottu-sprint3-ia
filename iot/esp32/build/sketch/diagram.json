@@ -1,0 +1,38 @@
+#line 1 "C:\\Users\\T-GAMER\\Downloads\\autottuIA\\Autottu-API\\iot\\esp32\\diagram.json"
+{
+  "version": 1,
+  "author": "AutoTTU",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-ds18b20", "id": "ds18b20", "top": 80, "left": 200, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r_pullup",
+      "top": 50,
+      "left": 260,
+      "attrs": { "value": "4.7k" }
+    },
+    { "type": "wokwi-potentiometer", "id": "fuelPot", "top": 180, "left": 210, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "alertLed",
+      "top": 120,
+      "left": -20,
+      "attrs": { "color": "red" }
+    }
+  ],
+  "connections": [
+    [ "ds18b20:DQ", "esp:4", "green", [] ],
+    [ "ds18b20:VCC", "esp:3V3", "red", [] ],
+    [ "ds18b20:GND", "esp:GND", "black", [] ],
+    [ "r_pullup:1", "ds18b20:DQ", "yellow", [] ],
+    [ "r_pullup:2", "esp:3V3", "red", [] ],
+    [ "fuelPot:VCC", "esp:3V3", "red", [] ],
+    [ "fuelPot:GND", "esp:GND1", "black", [] ],
+    [ "fuelPot:SIG", "esp:34", "blue", [] ],
+    [ "alertLed:A", "esp:2", "orange", [] ],
+    [ "alertLed:C", "esp:GND2", "black", [] ]
+  ],
+  "dependencies": {}
+}

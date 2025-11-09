@@ -1,0 +1,9 @@
+{
+  "additionalFiles": "..\\..,..\\..",
+  "compiler.optimization_flags": "-Os",
+  "customBuildProperties": "",
+  "fqbn": "esp32:esp32:esp32",
+  "hardwareFolders": "C:\\Users\\T-GAMER\\AppData\\Local\\Arduino15\\packages",
+  "otherLibrariesFolders": "C:\\Users\\T-GAMER\\Documents\\Arduino\\libraries",
+  "sketchLocation": "C:\\Users\\T-GAMER\\Downloads\\autottuIA\\Autottu-API\\iot\\esp32"
+}
