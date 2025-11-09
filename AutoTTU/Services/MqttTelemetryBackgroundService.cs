@@ -1,3 +1,4 @@
+using System;
 using System.Text;
 using System.Text.Json;
 using System.Security.Cryptography.X509Certificates;
@@ -73,9 +74,22 @@ public class MqttTelemetryBackgroundService : BackgroundService
             throw new InvalidOperationException("Cliente MQTT não inicializado.");
         }
 
+        var clientId = string.IsNullOrWhiteSpace(_mqttOptions.ClientId)
+            ? $"autottu-api-{Guid.NewGuid():N}"
+            : _mqttOptions.ClientId;
+
+        var broker = string.IsNullOrWhiteSpace(_mqttOptions.Broker)
+            ? "broker.hivemq.com"
+            : _mqttOptions.Broker;
+
+        var port = _mqttOptions.Port <= 0 ? 1883 : _mqttOptions.Port;
+        var topic = string.IsNullOrWhiteSpace(_mqttOptions.Topic)
+            ? "autottu/motos/1"
+            : _mqttOptions.Topic;
+
         var optionsBuilder = new MqttClientOptionsBuilder()
-            .WithClientId(_mqttOptions.ClientId)
-            .WithTcpServer(_mqttOptions.Broker, _mqttOptions.Port);
+            .WithClientId(clientId)
+            .WithTcpServer(broker, port);
 
         if (!string.IsNullOrWhiteSpace(_mqttOptions.Username) &&
             !string.IsNullOrWhiteSpace(_mqttOptions.Password))
@@ -108,14 +122,14 @@ public class MqttTelemetryBackgroundService : BackgroundService
             try
             {
                 await _mqttClient.ConnectAsync(options, cancellationToken);
-                _logger.LogInformation("Conectado ao broker MQTT {Broker}:{Port}", _mqttOptions.Broker, _mqttOptions.Port);
+                _logger.LogInformation("Conectado ao broker MQTT {Broker}:{Port} com ClientId {ClientId}", broker, port, clientId);
 
                 await _mqttClient.SubscribeAsync(new MqttTopicFilterBuilder()
-                    .WithTopic(_mqttOptions.Topic)
+                    .WithTopic(topic)
                     .WithAtLeastOnceQoS()
                     .Build(), cancellationToken);
 
-                _logger.LogInformation("Inscrito no tópico MQTT: {Topic}", _mqttOptions.Topic);
+                _logger.LogInformation("Inscrito no tópico MQTT: {Topic}", topic);
                 return;
             }
             catch (Exception ex)
@@ -165,10 +179,11 @@ public class MqttTelemetryBackgroundService : BackgroundService
         using var scope = _scopeFactory.CreateScope();
         var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
 
-        var motoExiste = await dbContext.Motos
-            .AnyAsync(m => m.IdMoto == message.DeviceId, cancellationToken);
+        var moto = await dbContext.Motos
+            .AsNoTracking()
+            .FirstOrDefaultAsync(m => m.IdMoto == message.DeviceId, cancellationToken);
 
-        if (!motoExiste)
+        if (moto is null)
         {
             _logger.LogWarning("Mensagem MQTT ignorada: dispositivo {DeviceId} não cadastrado.", message.DeviceId);
             return;
