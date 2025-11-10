@@ -435,5 +435,16 @@ Se houver erro de conexão com a API, verifique:
 
 ---
 
+## 👥 Integrantes do Projeto
+
+| Nome                         | RM     | GitHub                                             |
+| ---------------------------- | ------ | -------------------------------------------------- |
+| André Luís Mesquita de Abreu | 558159 | [@andre-abreu20](https://github.com/andre-abreu20) |
+| Maria Eduarda Brigidio       | 558575 | [@dudabrigidio](https://github.com/dudabrigidio)   |
+| Rafael Bompadre Lima         | 556459 | [@Rafa130206](https://github.com/Rafa130206)       |
+
+---
+
 **Desenvolvido com ❤️ para o AutoTTU**
+
 
